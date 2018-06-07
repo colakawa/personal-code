@@ -1,0 +1,466 @@
+
+/* -------------------- 基础样式 begin -------------------- */
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html,
+button,
+input,
+select,
+textarea {
+    color: #333;
+}
+
+body {
+    color: #333;
+    font-size: 16px;
+    line-height: 1.4;
+}
+
+::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+img {
+    vertical-align: middle;
+}
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+input {
+    outline: none;
+    border: 0;
+}
+
+textarea {
+    resize: vertical;
+}
+
+p {
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+    color: currentColor;
+}
+
+/* -------------------- 基础样式 end -------------------- */
+
+/* -------------------- 通用样式 begin -------------------- */
+
+.hidden {
+    display: none;
+    /*visibility: hidden;*/
+}
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+}
+
+.invisible {
+    visibility: hidden;
+}
+
+.clearfix:before,
+.clearfix:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+.clearfix {
+    *zoom: 1;
+}
+
+/*
+ * 水平居中
+ */
+.text-center {
+    text-align: center;
+}
+
+/*
+ * 图片替换文本
+ */
+.ir {
+
+    border: 0;
+    overflow: hidden;
+    /* IE 6/7 fallback */
+    *text-indent: -9999px;
+}
+
+.ir:before {
+    content: "";
+    display: block;
+    width: 0;
+    height: 150%;
+}
+
+
+/* -------------------- 通用样式 end -------------------- */
+
+/* -------------------- 页面布局样式 begin -------------------- */
+html,
+body {
+    height: 100%;
+    width: 100%;
+}
+body {
+    min-width: 1200px;
+}
+
+.page-content {
+    min-width: 1200px;
+    overflow: hidden;
+}
+
+.container {
+    position: relative;
+    width: 1200px;
+    margin: 0 auto;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+.container:before,
+.container:after {
+    content: " ";
+    display: table;
+}
+.container:after {
+    clear: both;
+}
+/* -------------------- 页面布局样式 end -------------------- */
+
+
+
+/* -------------------- 页面样式 begin -------------------- */
+
+/* top-bar */
+.top-bar {
+    background-color: #f5f5f5;
+}
+.top-bar p {
+    line-height: 40px;
+    color: #808080;
+}
+
+/* header */
+.header {
+    font-size: 0;
+}
+.header .brand {
+    margin-top: 23px;
+    background: no-repeat transparent url(../img/logo.png) center;
+    background-size: 100%;
+    display: inline-block;
+    height: 58px;
+    width: 222px;
+}
+.header .nav-bar {
+    float: right;
+}
+.header .nav-bar li{
+    float: left;
+    margin: 0 15px;
+}
+.header .nav-bar li a{
+    display: block;
+    height: 104px;
+    padding: 0 5px;
+    font-size: 18px;
+    line-height: 104px;
+    border-bottom: 3px solid #fff;
+    transition: all .3s ease;
+}
+.header .nav-bar li a:hover {
+    color: #ff7100;
+    border-bottom: 3px solid #ff7100;
+}
+.header .nav-bar li a.active {
+    color: #ff7100;
+    border-bottom: 3px solid #ff7100;
+}
+
+/* banner */
+
+.banner-wrap {
+    position: relative;
+    background-color: #333;
+    min-height: 367px;
+}
+
+.banner-wrap .banner li a {
+    display: block;
+    padding-top: 30.625%;
+    background-position: center;
+    background-size: cover
+}
+
+.banner-wrap .unslider-arrow {
+    display: none;
+    text-indent: -9999px;
+    top: 50%;
+    height: 60px;
+    width: 40px;
+    margin-top: -25px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: rgba(255, 255, 255, .4);
+    background-size: 50%
+}
+
+.banner-wrap .unslider-arrow.prev {
+    background-image: url(../img/arrow-prev.png)
+}
+
+.banner-wrap .unslider-arrow.next {
+    background-image: url(../img/arrow-next.png)
+}
+
+.banner-wrap:hover .unslider-arrow {
+    display: block;
+    z-index: 999
+}
+
+.banner-wrap .unslider-fade {
+    height: 325px
+}
+
+.banner-wrap .unslider-fade .unslider-wrap {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%
+}
+
+/* part-money-come */
+.part-money-come {
+    padding: 80px 0 60px;
+}
+.part-money-come .part-title {
+    font-size: 26px;
+    color: #808080;
+    margin-bottom: 10px;
+}
+.part-money-come .part-sub-title {
+    font-size: 21px;
+    color: #ff7100;
+    margin-bottom: 50px;
+}
+.part-money-come .comte-steps {
+    margin-top: 40px;
+    width: 935px;
+}
+.come-step-wrap {
+    width: 100%;
+    display: table;
+    color: #fff;
+}
+.come-step-wrap .step {
+    display: table-cell;
+    width: 25%;
+    text-align: center;
+    vertical-align: middle;
+    padding: 35px 10px;
+}
+.come-step-wrap .step h3 {
+    position: relative;
+    font-size: 23px;
+    padding-bottom: 17px;
+}
+.come-step-wrap .step h3:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    margin-left: -38px;
+    width: 76px;
+    height: 1px;
+    background-color: #f06f20;
+    border-bottom: 1px solid #ffd56f;
+}
+.come-step-wrap .step p {
+    margin-top: 17px;
+    height: 44px;
+    padding: 0 25px;
+}
+.come-step-wrap .step img {
+    margin-top: 19px;
+    width: 40px;
+    height: 40px;
+}
+.come-step-wrap .step-one {
+    background-color: #ffa520;
+}
+.come-step-wrap .step-two {
+    background-color: #fe9d20;
+}
+.come-step-wrap .step-three {
+    background-color: #fb9524;
+}
+.come-step-wrap .step-four {
+    background-color: #fe9d20;
+}
+
+/* part-money-out */
+.part-money-out {
+    padding: 80px 0 76px;
+    background: no-repeat #f5f6f8 url(../img/money_out_bg.png) center;
+    background-size: cover;
+}
+.part-money-out .part-title {
+    font-size: 26px;
+    color: #808080;
+    margin-bottom: 10px;
+}
+.part-money-out .part-sub-title {
+    font-size: 21px;
+    color: #ff7100;
+    margin-bottom: 50px;
+}
+.part-money-out img {
+    width: 970px;
+}
+
+/* part-red */
+.part-red {
+    padding-top: 50px;
+    background: no-repeat #febd46 url(../img/red_pg_bg.png) center;
+    background-size: 100% 100%;
+}
+.part-red img {
+    width: 973px;
+}
+
+
+/* footer */
+.footer {
+    background-color: #333;
+    padding: 30px 0;
+    color: #707070;
+    border-bottom: 1px solid #404040;
+}
+.footer-content {
+    width: 100%;
+    display: table;
+}
+.footer-content > div {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+    width: 33.33%;
+}
+.footer-content > div {
+    border-right: 1px solid #262626;
+    border-left: 1px solid #404040;
+}
+.footer-content > div:first-child {
+    border-left: 0;
+}
+.footer-content > div:last-child {
+    border-right: 0;
+}
+.footer-content .logo img {
+    height: 58px;
+}
+
+.footer-content .contact {
+
+}
+.footer-content .contact a {
+    display: inline-block;
+    font-size: 0;
+    padding: 5px;
+    margin: 10px 25px;
+    width: 130px;
+    text-align: left;
+}
+.footer-content .contact img,
+.footer-content .contact span {
+    vertical-align: middle;
+    line-height: 1;
+}
+.footer-content .contact img {
+    width: 15px;
+    margin-right: 12px;
+}
+.footer-content .contact span {
+    font-size: 16px;
+}
+
+.footer-content .qrcode {
+    padding-top: 10px;
+}
+.footer-content .qrcode .qrcode-wrap {
+    display: inline-block;
+    margin: 0 23px;
+}
+.footer-content .qrcode .qrcode-wrap img {
+    width: 103px;
+    height: 103px;
+    border: 7px solid #fff;
+}
+.footer-content .qrcode .qrcode-wrap p {
+    margin-top: 15px;
+    color: #fff;
+}
+
+/* copy-right */
+.copy-right {
+    background: #333;
+    height: 34px;
+    line-height: 34px;
+    text-align: center;
+    color: #707070;
+    border-top: 1px solid #262626;
+}
+
+
+/* -------------------- 页面样式 end -------------------- */
+
+
